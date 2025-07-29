@@ -11,7 +11,7 @@ const navItems = [
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-    const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+    const pathname = usePathname();
     return (
         <div className="flex min-h-screen">
             <aside className="w-64 bg-white p-4 flex flex-col items-center gap-4 border-r">
